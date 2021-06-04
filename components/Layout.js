@@ -1,6 +1,9 @@
 import Head from 'next/head';
 import styled from 'styled-components';
 import Link from 'next/link';
+import { Badge } from 'antd';
+import { ShoppingCartOutlined } from '@ant-design/icons';
+
 
 const Container = styled.div`
   max-width:${(props) => props.theme.maxWidth}px;
@@ -42,9 +45,20 @@ const Layout = ({ children }) => {
         <Menu>
           {NAV_CONSTANT.map((item, index) => {
             return (
-              <MenuItem key={index}><Link href={item.url}>{item.text}</Link></MenuItem>
+              <MenuItem key={index}>
+                <Link href={item.url}>
+                  {item.text}
+                </Link>
+              </MenuItem>
             )
           })}
+          <MenuItem>
+             <Badge count={5} size="small">
+               <Link href="/cart">
+              <ShoppingCartOutlined />
+              </Link>
+             </Badge>          
+           </MenuItem>         
         </Menu>
       </TopNav>
       {children}
