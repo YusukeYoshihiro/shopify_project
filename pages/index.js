@@ -7,12 +7,10 @@ const { Title, Paragraph } = Typography;
 const Section = styled(Row)`
   
 `
-
 const LeftBox = styled(Col)`
    background-color: #EFEFEB;
    padding: 20px;
 `
-
 const RightBox = styled(Col)`
    background-color: #EFEFEB;
    padding: 20px;
