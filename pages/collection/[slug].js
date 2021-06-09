@@ -7,6 +7,7 @@ const { Title , Paragraph} = Typography;
 const CollectionPage = ({ collection }) => {
   const router = useRouter()
   const { slug } = router.query
+
   console.log(collection);
   return (
     <div>
@@ -14,7 +15,6 @@ const CollectionPage = ({ collection }) => {
       <List
         grid={{ gutter: 16, column: 4 }}
         dataSource={collection.products}
-       
         renderItem={item => (
           <List.Item>
             <Link href={`/product/${item.handle}`}>
@@ -22,7 +22,6 @@ const CollectionPage = ({ collection }) => {
              title={item.title}
              cover={<img alt="example" src={item.images[0].src} />}
             >
-
              <Paragraph
                  ellipsis={{
                   rows:2,
