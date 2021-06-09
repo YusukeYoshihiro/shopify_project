@@ -35,8 +35,8 @@ export default function Home({products, collections}) {
       };
     })
   }, [])
-  console.log({products, collections});
-  console.log({newArrival, sofas});
+  // console.log({products, collections});
+  // console.log({newArrival, sofas});
   return (
     <>
       <Header />
