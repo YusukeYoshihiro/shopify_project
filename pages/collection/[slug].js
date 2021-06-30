@@ -7,7 +7,7 @@ const { Title , Paragraph} = Typography;
 const CollectionPage = ({ collection }) => {
   const router = useRouter()
   const { slug } = router.query
-
+  
   console.log(collection);
   return (
     <div>
@@ -38,8 +38,8 @@ const CollectionPage = ({ collection }) => {
     </div>
   )
 }
-
 export default CollectionPage;
+
 
 // https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
 export async function getServerSideProps(context) {
@@ -59,4 +59,3 @@ export async function getServerSideProps(context) {
   //   }, // will be passed to the page component as props
   // }
 }
-

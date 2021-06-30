@@ -11,4 +11,4 @@ const ProductPage = () =>{
 
 export default ProductPage;
 
-'http://localhost:3000/product/1234512';
+// 'http://localhost:3000/product/1234512';

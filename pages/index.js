@@ -21,9 +21,14 @@ const RightBox = styled(Col)`
 const Image = styled.img`
     width: 90%;
 `
+
 export default function Home({products, collections}) {
   const [newArrival, setNewArrival] = useState({});
   const [sofas, setSofas] = useState({});
+
+  client.product.fetchAll().then((item) => {
+    console.log(item);
+  });
 
   useEffect(() => {
     collections.forEach(collection =>{
@@ -35,7 +40,7 @@ export default function Home({products, collections}) {
       };
     })
   }, [])
-  // console.log({products, collections});
+  console.log({products, collections});
   // console.log({newArrival, sofas});
   return (
     <>
